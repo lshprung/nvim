@@ -1,8 +1,5 @@
--- Syntax Highlighting Settings
-vim.syntax = true                 --turn on syntax highlighting
-vim.cmd("colorscheme slate")      --set colorscheme to slate
-
 -- Misc. Settings
+vim.syntax          = true        --turn on syntax highlighting
 vim.opt.hlsearch    = true        --highlight search matches
 vim.opt.number      = true        --number rows
 vim.opt.shiftwidth  = 4           --set shiftwidth
