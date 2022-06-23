@@ -10,9 +10,6 @@ vim.opt.tabstop     = 4           --set tab length
 vim.opt.foldmethod     = "indent" --enable fold detection
 vim.opt.foldlevelstart = 20       --set initial fold
 
--- Color Settings [TODO]
---highlight Pmenu ctermbg=White ctermfg=Black guibg=Gray
-
 -- Additional Settings from Video Series
 -- :help options
 -- Autocomplete Settings
