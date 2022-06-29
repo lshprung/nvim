@@ -5,6 +5,7 @@ vim.opt.number      = true        --number rows
 vim.opt.shiftwidth  = 4           --set shiftwidth
 vim.opt.smartindent = true        --auto-indent
 vim.opt.tabstop     = 4           --set tab length
+vim.cmd("autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o") --disable automatic comment insertion
 
 -- Fold Settings
 vim.opt.foldmethod     = "indent" --enable fold detection
