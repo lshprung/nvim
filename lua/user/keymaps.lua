@@ -35,6 +35,12 @@ keymap("n", "<S-l>", "gt", opts)
 keymap("n", "<S-Left>", "gT", opts)
 keymap("n", "<S-Right>", "gt", opts)
 
+-- Navigate buffers (both hjkl and arrow keys)
+keymap("n", "<S-j>", ":bnext<CR>", opts)
+keymap("n", "<S-k>", ":bprevious<CR>", opts)
+keymap("n", "<S-Down>", ":bnext<CR>", opts)
+keymap("n", "<S-Up>", ":bprevious<CR>", opts)
+
 -- Open Lexplorer
 --keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
