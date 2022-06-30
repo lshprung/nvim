@@ -3,10 +3,16 @@ local M = {}
 -- TODO: backfill this to template
 M.setup = function()
   local signs = {
+	--[[
     { name = "DiagnosticSignError", text = "" },
     { name = "DiagnosticSignWarn", text = "" },
     { name = "DiagnosticSignHint", text = "" },
     { name = "DiagnosticSignInfo", text = "" },
+	]]
+    { name = "DiagnosticSignError", text = "X" },
+    { name = "DiagnosticSignWarn", text = "!" },
+    { name = "DiagnosticSignHint", text = "i" },
+    { name = "DiagnosticSignInfo", text = "?" },
   }
 
   for _, sign in ipairs(signs) do
