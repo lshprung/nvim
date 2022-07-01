@@ -32,6 +32,6 @@ return packer.startup(function(use)
 	use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
 	-- TreeSitter
-	use "nvim-treesitter/nvim-treesitter" --enable treesitter
+	--use "nvim-treesitter/nvim-treesitter" --enable treesitter
 
 end)
