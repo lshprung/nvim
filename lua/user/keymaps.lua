@@ -39,6 +39,9 @@ keymap("n", "<S-Right>", "gt", opts)
 keymap("n", "<S-Down>", ":bnext<CR>", opts)
 keymap("n", "<S-Up>", ":bprevious<CR>", opts)
 
+-- Close buffer without closing window
+keymap("n", "<leader>bd", ":b#<CR>:bd#<CR>", opts)
+
 -- Open Lexplorer
 --keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
