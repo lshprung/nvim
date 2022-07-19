@@ -4,4 +4,4 @@ require "user.plugins"     --plugin setup
 require "user.colorscheme" --set colorscheme
 require "user.cmp"         --autocompletion
 require "user.lsp"         --language server protocol
---require "user.treesitter"  --treesitter
+require "user.treesitter"  --treesitter

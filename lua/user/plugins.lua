@@ -34,6 +34,6 @@ return packer.startup(function(use)
 
 
 	-- TreeSitter
-	--use "nvim-treesitter/nvim-treesitter" --enable treesitter
+	use "nvim-treesitter/nvim-treesitter" --enable treesitter
 
 end)
