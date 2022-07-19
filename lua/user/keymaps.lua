@@ -90,4 +90,4 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 ]]
 
 -- Toggle GUI colors
-keymap("n", "<leader>g", ":set termguicolors!<CR>", opts)
+keymap("n", "<leader>g", ":set termguicolors!<CR>:TSToggle highlight<CR>", opts)
