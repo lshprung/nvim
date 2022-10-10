@@ -39,9 +39,6 @@ keymap("n", "<S-Right>", "gt", opts)
 keymap("n", "<S-Down>", ":bnext<CR>", opts)
 keymap("n", "<S-Up>", ":bprevious<CR>", opts)
 
--- Close buffer without closing window
-keymap("n", "<leader>bd", ":b#<CR>:bd#<CR>", opts)
-
 -- Open Lexplorer
 --keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
@@ -89,5 +86,12 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 ]]
 
+-- Buffer Options
+keymap("n", "<leader>bd", ":b#<CR>:bd#<CR>", opts) --Close buffer without closing window
+
 -- Toggle GUI colors
 keymap("n", "<leader>g", ":set termguicolors!<CR>:TSToggle highlight<CR>", opts)
+
+-- Workspace Options
+keymap("n", "<leader>wsh", ":split<CR>", opts) --Horizontal split workspace
+keymap("n", "<leader>wsv", ":vs<CR>", opts)    --Vertical split workspace
