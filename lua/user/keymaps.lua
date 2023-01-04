@@ -93,6 +93,8 @@ keymap("n", "<leader>bl", ":JABSOpen<CR>", opts)   --Open buffer switcher ('b'uf
 -- Toggle GUI colors
 keymap("n", "<leader>g", ":set termguicolors!<CR>:TSToggle highlight<CR>", opts) -- ('g'ui)
 
+-- LSP options - see lsp/handlers.lua
+
 -- Telescope options
 keymap("n", "<leader>tf", ":Telescope find_files<CR>", opts) -- ('f'ind_files)
 keymap("n", "<leader>ts", ":Telescope live_grep<CR>", opts)  -- ('s'tring)
