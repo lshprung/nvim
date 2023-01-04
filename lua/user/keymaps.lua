@@ -87,11 +87,12 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 ]]
 
 -- Buffer Options
-keymap("n", "<leader>bd", ":b#<CR>:bd#<CR>", opts) --Close buffer without closing window
+keymap("n", "<leader>bd", ":b#<CR>:bd#<CR>", opts) --Close buffer without closing window ('b'uffer 'd'elete)
+keymap("n", "<leader>bl", ":JABSOpen<CR>", opts)   --Open buffer switcher ('b'uffer 'l'ist)
 
 -- Toggle GUI colors
-keymap("n", "<leader>g", ":set termguicolors!<CR>:TSToggle highlight<CR>", opts)
+keymap("n", "<leader>g", ":set termguicolors!<CR>:TSToggle highlight<CR>", opts) -- ('g'ui)
 
 -- Workspace Options
-keymap("n", "<leader>wsh", ":split<CR>", opts) --Horizontal split workspace
-keymap("n", "<leader>wsv", ":vs<CR>", opts)    --Vertical split workspace
+keymap("n", "<leader>wsh", ":split<CR>", opts) --Horizontal split workspace ('s'plit 'h'orizontal)
+keymap("n", "<leader>wsv", ":vs<CR>", opts)    --Vertical split workspace ('s'plit 'v'ertical)

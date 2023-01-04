@@ -14,6 +14,9 @@ return packer.startup(function(use)
 	-- Colorschemes
 	--use "lunarvim/colorschemes"        -- Additional colorschemes
 
+	-- Buffers
+	use 'matbme/JABS.nvim'
+
 	-- cmp plugins
 	use "hrsh7th/nvim-cmp" -- The completion plugin
 	use "hrsh7th/cmp-buffer" -- Buffer completions
