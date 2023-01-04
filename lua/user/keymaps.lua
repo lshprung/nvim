@@ -93,6 +93,14 @@ keymap("n", "<leader>bl", ":JABSOpen<CR>", opts)   --Open buffer switcher ('b'uf
 -- Toggle GUI colors
 keymap("n", "<leader>g", ":set termguicolors!<CR>:TSToggle highlight<CR>", opts) -- ('g'ui)
 
+-- Telescope options
+keymap("n", "<leader>tf", ":Telescope find_files<CR>", opts) -- ('f'ind_files)
+keymap("n", "<leader>ts", ":Telescope live_grep<CR>", opts)  -- ('s'tring)
+keymap("n", "<leader>tb", ":Telescope buffers<CR>", opts)    -- ('b'uffers)
+keymap("n", "<leader>th", ":Telescope keymaps<CR>", opts)    -- ('h'elp)
+--keymap("n", "<leader>tld", ":Telescope lsp_document_diagnostics<CR>", opts) -- ('l'sp 'd'iagnostics)
+keymap("n", "<leader>tt", ":Telescope treesitter<CR>", opts) -- ('t'reesitter)
+
 -- Workspace Options
 keymap("n", "<leader>wsh", ":split<CR>", opts) --Horizontal split workspace ('s'plit 'h'orizontal)
 keymap("n", "<leader>wsv", ":vs<CR>", opts)    --Vertical split workspace ('s'plit 'v'ertical)

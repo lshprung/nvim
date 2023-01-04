@@ -1,3 +1,8 @@
+local status_ok, jabs = pcall(require, "jabs")
+if not status_ok then
+	return
+end
+
 require 'jabs'.setup {
 	-- Options for the main window
 	position = {'left', 'bottom'},

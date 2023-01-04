@@ -9,7 +9,7 @@ return packer.startup(function(use)
 	-- My plugins here
 	use "wbthomason/packer.nvim" -- Have packer manage itself
 	--use "nvim-lua/popup.nvim"          -- An implementation of the Popup API from vim in Neovim
-	--use "nvim-lua/plenary.nvim"        -- Useful lua functions used by lots of plugins
+	use "nvim-lua/plenary.nvim"        -- Useful lua functions used by lots of plugins
 
 	-- Colorschemes
 	--use "lunarvim/colorschemes"        -- Additional colorschemes
@@ -36,8 +36,10 @@ return packer.startup(function(use)
 	use "williamboman/mason.nvim"
 	use "williamboman/mason-lspconfig.nvim"
 
-
 	-- TreeSitter
 	use "nvim-treesitter/nvim-treesitter" --enable treesitter
+
+	-- Telescope
+	use { "nvim-telescope/telescope.nvim", tag = '0.1.0' }
 
 end)
