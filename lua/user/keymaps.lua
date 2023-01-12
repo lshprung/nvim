@@ -96,6 +96,7 @@ keymap("n", "<leader>g", ":set termguicolors!<CR>:TSToggle highlight<CR>", opts)
 -- LSP options - see lsp/handlers.lua
 
 -- Telescope options
+keymap("n", "<leader>t<CR>", ":Telescope <CR>", opts)        -- ('t'elescope)
 keymap("n", "<leader>tf", ":Telescope find_files<CR>", opts) -- ('f'ind_files)
 keymap("n", "<leader>ts", ":Telescope live_grep<CR>", opts)  -- ('s'tring)
 keymap("n", "<leader>tb", ":Telescope buffers<CR>", opts)    -- ('b'uffers)
