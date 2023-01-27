@@ -40,6 +40,6 @@ return packer.startup(function(use)
 	use "nvim-treesitter/nvim-treesitter" --enable treesitter
 
 	-- Telescope
-	use { "nvim-telescope/telescope.nvim", tag = '0.1.0' }
+	use { "nvim-telescope/telescope.nvim", tag = '0.1.1' }
 
 end)
