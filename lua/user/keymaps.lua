@@ -90,8 +90,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "<leader>bd", ":b#<CR>:bd#<CR>", opts) --Close buffer without closing window ('b'uffer 'd'elete)
 keymap("n", "<leader>bl", ":JABSOpen<CR>", opts)   --Open buffer switcher ('b'uffer 'l'ist)
 
--- Toggle GUI colors
-keymap("n", "<leader>g", ":set termguicolors!<CR>:TSToggle highlight<CR>", opts) -- ('g'ui)
+-- Toggle GUI colors - see colorscheme.lua
 
 -- LSP options - see lsp/handlers.lua
 

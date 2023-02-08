@@ -13,6 +13,7 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	--use "lunarvim/colorschemes"        -- Additional colorschemes
+	use "marko-cerovac/material.nvim"
 
 	-- Buffers
 	use 'matbme/JABS.nvim'
