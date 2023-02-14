@@ -20,6 +20,11 @@ local function colorscheme_set()
 
 	-- Set Parentheses matching to Magenta so that it's actually visible
 	vim.cmd("highlight MatchParen ctermbg=none ctermfg=magenta guibg=none guifg=magenta")
+
+	-- Change some gui colors
+	vim.cmd("highlight LineNr guifg=yellow3")
+	vim.cmd("highlight Comment guifg=yellow")
+	vim.cmd("highlight Todo guibg=blue")
 end
 
 -- keymap for toggling colorscheme
@@ -27,16 +32,16 @@ vim.keymap.set("n", "<leader>g", function()
 	gui = not gui
 	if gui then
 		vim.cmd(":set termguicolors")
-		colorscheme_set(gui)
+		colorscheme_set()
 		vim.cmd(":TSEnable highlight")
 	else
 		vim.cmd(":set notermguicolors")
-		colorscheme_set(gui)
+		colorscheme_set()
 		vim.cmd(":TSDisable highlight")
 	end
 end)
 
-colorscheme_set(gui)
+colorscheme_set()
 
 --local colorscheme = "legacy_slate"
 --local gui_colorscheme = "material"
