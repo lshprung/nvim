@@ -23,7 +23,7 @@ local function colorscheme_set()
 
 	-- Change some gui colors
 	vim.cmd("highlight LineNr guifg=yellow3")
-	vim.cmd("highlight Comment guifg=yellow")
+	vim.cmd("highlight Comment guifg=yellow3")
 	vim.cmd("highlight Todo guibg=blue")
 end
 
