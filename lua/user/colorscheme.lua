@@ -1,11 +1,10 @@
 local gui = false -- set to true if guicolors should be on by default
-vim.g.material_style = "darker"
 
 local function colorscheme_set()
 	local colorscheme = "legacy_slate"
 
 	if gui then
-		colorscheme = "material"
+		colorscheme = "slate"
 	end
 
 	local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
