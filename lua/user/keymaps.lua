@@ -88,6 +88,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Buffer Options
 keymap("n", "<leader>bd", ":b#<CR>:bd#<CR>", opts) --Close buffer without closing window ('b'uffer 'd'elete)
+keymap("n", "<leader>bD", ":%bd|e#|bd#<CR>", opts) --Close all buffers except the current buffer
 keymap("n", "<leader>bl", ":JABSOpen<CR>", opts)   --Open buffer switcher ('b'uffer 'l'ist)
 
 -- Toggle GUI colors - see colorscheme.lua
