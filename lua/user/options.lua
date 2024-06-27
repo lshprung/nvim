@@ -22,4 +22,4 @@ vim.opt.shortmess:append "c"                    -- for autocompletion, don't giv
 vim.opt.conceallevel  = 0         -- do not conceal text
 vim.opt.fileencoding  = "utf-8"   -- the encoding written to a file
 --vim.opt.pumheight     = 10        -- pop up menu height
---vim.opt.termguicolors = true      -- set term gui colors (most terminals support this)
+vim.opt.termguicolors = false     -- gui colors off by default
