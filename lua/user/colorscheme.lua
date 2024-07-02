@@ -1,7 +1,7 @@
 local gui = false -- set to true if guicolors should be on by default
 
 local function colorscheme_set()
-	local colorscheme = "legacy_slate"
+	local colorscheme = "patch_0.10_legacy_slate"
 
 	if gui then
 		colorscheme = "slate"
@@ -14,11 +14,16 @@ local function colorscheme_set()
 	end
 
 	-- Set Popup menu colors
-	--highlight Pmenu ctermbg=White ctermfg=Black guibg=Gray
-	vim.cmd("highlight Pmenu ctermbg=gray guibg=gray")
+	if not (vim.fn.has("nvim-0.10") == 1) then
+		--highlight Pmenu ctermbg=White ctermfg=Black guibg=Gray
+		vim.cmd("highlight Pmenu ctermbg=gray guibg=gray")
 
-	-- Set Parentheses matching to Magenta so that it's actually visible
-	vim.cmd("highlight MatchParen ctermbg=none ctermfg=magenta guibg=none guifg=magenta")
+		-- Set Parentheses matching to Magenta so that it's actually visible
+		vim.cmd("highlight MatchParen ctermbg=none ctermfg=magenta guibg=none guifg=magenta")
+	end
+
+	-- TODO fix TODO highlight
+	-- TODO fix FIXME highlight
 
 	-- Change some gui colors
 	vim.cmd("highlight LineNr guifg=yellow3")
