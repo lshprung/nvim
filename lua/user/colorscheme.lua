@@ -1,7 +1,11 @@
 local gui = false -- set to true if guicolors should be on by default
 
 local function colorscheme_set()
-	local colorscheme = "patch_0.10_legacy_slate"
+	local colorscheme = "sorbet"
+
+	if not (vim.fn.has("nvim-0.10") == 1) then
+		colorscheme = "legacy_slate"
+	end
 
 	if gui then
 		colorscheme = "slate"
@@ -26,6 +30,7 @@ local function colorscheme_set()
 	-- TODO fix FIXME highlight
 
 	-- Change some gui colors
+	vim.cmd("highlight LineNr ctermfg=lightyellow")
 	vim.cmd("highlight LineNr guifg=yellow3")
 	vim.cmd("highlight Comment guifg=yellow3")
 	vim.cmd("highlight Todo guibg=blue")
