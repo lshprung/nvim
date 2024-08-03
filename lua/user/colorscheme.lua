@@ -3,10 +3,6 @@ local gui = false -- set to true if guicolors should be on by default
 local function colorscheme_set()
 	local colorscheme = "sorbet"
 
-	if not (vim.fn.has("nvim-0.10") == 1) then
-		colorscheme = "legacy_slate"
-	end
-
 	if gui then
 		colorscheme = "slate"
 	end
@@ -17,14 +13,14 @@ local function colorscheme_set()
 	  return
 	end
 
-	-- Set Popup menu colors
-	if not (vim.fn.has("nvim-0.10") == 1) then
-		--highlight Pmenu ctermbg=White ctermfg=Black guibg=Gray
-		vim.cmd("highlight Pmenu ctermbg=gray guibg=gray")
+	---- Set Popup menu colors
+	--if not (vim.fn.has("nvim-0.10") == 1) then
+	--	--highlight Pmenu ctermbg=White ctermfg=Black guibg=Gray
+	--	vim.cmd("highlight Pmenu ctermbg=gray guibg=gray")
 
-		-- Set Parentheses matching to Magenta so that it's actually visible
-		vim.cmd("highlight MatchParen ctermbg=none ctermfg=magenta guibg=none guifg=magenta")
-	end
+	--	-- Set Parentheses matching to Magenta so that it's actually visible
+	--	vim.cmd("highlight MatchParen ctermbg=none ctermfg=magenta guibg=none guifg=magenta")
+	--end
 
 	-- TODO fix TODO highlight
 	-- TODO fix FIXME highlight
@@ -34,6 +30,7 @@ local function colorscheme_set()
 	vim.cmd("highlight LineNr guifg=yellow3")
 	vim.cmd("highlight Comment guifg=yellow3")
 	vim.cmd("highlight Todo guibg=blue")
+	vim.cmd("highlight MatchParen guibg=none guifg=magenta")
 end
 
 -- keymap for toggling colorscheme

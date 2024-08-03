@@ -1,5 +1,5 @@
 syntax on
-colorscheme slate
+colorscheme sorbet
 
 set hlsearch
 set number
