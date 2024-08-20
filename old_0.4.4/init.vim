@@ -1,5 +1,9 @@
 syntax on
-colorscheme sorbet
+try
+	colorscheme sorbet 
+catch
+	colorscheme slate
+endtry
 
 set hlsearch
 set number
