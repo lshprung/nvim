@@ -3,6 +3,8 @@ local m = require("mason-lspconfig")
 -- Servers that should always be installed
 local servers = m.get_installed_servers();
 
+local on_attach = require("user.lsp.handlers").on_attach
+
 local settings = {
 	ui = {
 		border = "none",
@@ -28,7 +30,7 @@ local opts = {}
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
 for _, server in pairs(servers) do
 	opts = {
-		on_attach = require("user.lsp.handlers").on_attach,
+		--on_attach = require("user.lsp.handlers").on_attach,
 		capabilities = require("user.lsp.handlers").capabilities,
 	}
 
