@@ -39,11 +39,15 @@ vim.keymap.set("n", "<leader>g", function()
 	if gui then
 		vim.cmd(":set termguicolors")
 		colorscheme_set()
-		vim.cmd(":TSEnable highlight")
+		if vim.fn.exists(':TSEnable') > 0 then
+			vim.cmd(":TSEnable highlight")
+		end
 	else
 		vim.cmd(":set notermguicolors")
 		colorscheme_set()
-		vim.cmd(":TSDisable highlight")
+		if vim.fn.exists(':TSDisable') > 0 then
+			vim.cmd(":TSDisable highlight")
+		end
 	end
 end)
 

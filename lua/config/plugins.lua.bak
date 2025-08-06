@@ -26,8 +26,8 @@ plugin_list = {
 	-- LSP
 	"neovim/nvim-lspconfig",              -- enable LSP
 	--use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim",
+	{ "mason-org/mason.nvim", tag = "v2.0.0" },
+	{ "mason-org/mason-lspconfig.nvim", tag = "v2.0.0" },
 
 	-- TreeSitter
 	"nvim-treesitter/nvim-treesitter", --enable treesitter

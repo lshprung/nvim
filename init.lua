@@ -1,8 +1,8 @@
-require "user.options"     --basic options
-require "user.keymaps"     --custom keybinds
-require "user.plugins"     --plugin setup
-require "user.colorscheme" --set colorscheme
-require "user.jabs"        --buffers
-require "user.cmp"         --autocompletion
-require "user.lsp"         --language server protocol
-require "user.treesitter"  --treesitter
+require "config.options"     --basic options
+require "config.keymaps"     --custom keybinds
+require "config.plugins"     --plugin setup
+require "config.colorscheme" --set colorscheme
+--require "user.jabs"        --buffers
+--require "user.cmp"         --autocompletion
+--require "user.lsp"         --language server protocol
+--require "user.treesitter"  --treesitter
