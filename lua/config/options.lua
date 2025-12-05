@@ -23,4 +23,3 @@ vim.opt.conceallevel  = 0         -- do not conceal text
 vim.opt.fileencoding  = "utf-8"   -- the encoding written to a file
 --vim.opt.pumheight     = 10        -- pop up menu height
 vim.opt.colorcolumn = "80"
-vim.opt.termguicolors = false     -- gui colors off by default

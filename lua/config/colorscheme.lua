@@ -1,16 +1,31 @@
-local gui = false -- set to true if guicolors should be on by default
+local gui = true -- set to true if guicolors should be on by default
 
-local function colorscheme_set()
-	local colorscheme = "sorbet"
+local function colorscheme_set(set_gui_colors)
 
-	if gui then
+	local colorscheme
+
+	if set_gui_colors then
+		vim.cmd(":set termguicolors")
 		colorscheme = "slate"
+	else
+		vim.cmd(":set notermguicolors")
+		colorscheme = "sorbet"
 	end
 
 	local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 	if not status_ok then
 	  vim.notify("colorscheme " .. colorscheme .. " not found!")
 	  return
+	end
+
+	if set_gui_colors then
+		if vim.fn.exists(':TSEnable') > 0 then
+			vim.cmd(":TSEnable highlight")
+		end
+	else
+		if vim.fn.exists(':TSDisable') > 0 then
+			vim.cmd(":TSDisable highlight")
+		end
 	end
 
 	---- Set Popup menu colors
@@ -36,22 +51,10 @@ end
 -- keymap for toggling colorscheme
 vim.keymap.set("n", "<leader>g", function()
 	gui = not gui
-	if gui then
-		vim.cmd(":set termguicolors")
-		colorscheme_set()
-		if vim.fn.exists(':TSEnable') > 0 then
-			vim.cmd(":TSEnable highlight")
-		end
-	else
-		vim.cmd(":set notermguicolors")
-		colorscheme_set()
-		if vim.fn.exists(':TSDisable') > 0 then
-			vim.cmd(":TSDisable highlight")
-		end
-	end
+	colorscheme_set(gui)
 end)
 
-colorscheme_set()
+colorscheme_set(gui)
 
 --local colorscheme = "legacy_slate"
 --local gui_colorscheme = "material"
